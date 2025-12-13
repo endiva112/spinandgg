@@ -23,7 +23,7 @@ fun CargarHome(navController: NavHostController) {
     ) {
         AgregarCabecera(modifier = Modifier.weight(0.8f))
 
-        AgregarBarraInformativa(modifier = Modifier.weight(0.8f))
+        AgregarBarraInformativa(modifier = Modifier.weight(0.8f), "RESULTADOS DE ÚLTIMOS PARTIDOS", Color.White,Color(0xFF000000))
 
         LazyColumn(
             modifier = Modifier

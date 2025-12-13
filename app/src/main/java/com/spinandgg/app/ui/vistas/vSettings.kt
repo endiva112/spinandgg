@@ -41,7 +41,10 @@ fun CargarSettings(navController: NavHostController) {
     ) {
         AgregarCabecera(modifier = Modifier.weight(0.8f))
 
-        AgregarBarraInformativa(modifier = Modifier.weight(0.8f))
+        AgregarBarraInformativa(modifier = Modifier.weight(0.8f), "MI CUENTA", Color.Black,Color(
+            0xCCE4E4E4
+        )
+        )
 
         /*titulo
         Box(
