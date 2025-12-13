@@ -154,7 +154,7 @@ fun CargarLogin(navController: NavHostController) {
                         }
                         if ((usuarioActivo?.password == null) || (usuarioActivo?.username == null) ){
                             errorMessage = "Usuario o Contraseña sin rellenar"
-                            navController.navigate("rutaHome") {
+                            navController.navigate("rutaHome") {//TODO BORRAR
                                 launchSingleTop = true
                             }
                         }

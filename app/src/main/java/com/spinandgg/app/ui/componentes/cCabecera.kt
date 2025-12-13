@@ -17,12 +17,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
 import com.spinandgg.app.R
 
 @Composable
 fun AgregarCabecera(
     modifier: Modifier = Modifier,
-    onProfileClick: () -> Unit = {}
+    navController: NavHostController
 ) {
     Box(
         modifier = modifier
@@ -47,7 +48,11 @@ fun AgregarCabecera(
                 .size(50.dp)
                 .aspectRatio(1f)
                 .clip(CircleShape)
-                .clickable { onProfileClick() }
+                .clickable {
+                    navController.navigate("rutaPerfil") {
+                        launchSingleTop = true
+                    }
+                }
         )
     }
 }

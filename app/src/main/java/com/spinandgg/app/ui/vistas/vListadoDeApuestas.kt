@@ -22,7 +22,7 @@ fun CargarListadoDeApuestas(navController: NavHostController) {
         modifier = Modifier
             .fillMaxSize()
     ) {
-        AgregarCabecera(modifier = Modifier.weight(1f))
+        AgregarCabecera(modifier = Modifier.weight(1f), navController)
 
         AgregarBarraBusqueda(modifier = Modifier.weight(0.6f))
 

@@ -21,7 +21,7 @@ fun CargarHome(navController: NavHostController) {
         modifier = Modifier
             .fillMaxSize()
     ) {
-        AgregarCabecera(modifier = Modifier.weight(1f))
+        AgregarCabecera(modifier = Modifier.weight(1f), navController)
 
         AgregarBarraInformativa(modifier = Modifier.weight(0.6f), "RESULTADOS DE ÚLTIMOS PARTIDOS", Color.White,Color(0xFF000000))
 

@@ -7,6 +7,7 @@ import androidx.navigation.compose.rememberNavController
 import com.spinandgg.app.ui.vistas.CargarHome
 import com.spinandgg.app.ui.vistas.CargarListadoDeApuestas
 import com.spinandgg.app.ui.vistas.CargarLogin
+import com.spinandgg.app.ui.vistas.CargarPerfil
 import com.spinandgg.app.ui.vistas.CargarSettings
 
 
@@ -23,5 +24,6 @@ fun AppNavHost() {
         composable("rutaHome") { CargarHome(navController) }
         composable("rutaListadoDeApuestas") { CargarListadoDeApuestas(navController) }
         composable("rutaSettings") { CargarSettings(navController) }
+        composable("rutaPerfil") { CargarPerfil(navController) }
     }
 }

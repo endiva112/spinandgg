@@ -38,10 +38,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
+import androidx.navigation.NavHostController
 
 
 @Composable
-fun CrearPerfil() {
+fun CargarPerfil(navController: NavHostController) {
     var nombre by remember { mutableStateOf("nombre de usuario") }
     var correo by remember { mutableStateOf("correo electrónico") }
 
