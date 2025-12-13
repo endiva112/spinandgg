@@ -14,7 +14,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -32,6 +31,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.spinandgg.app.ui.logica.GestorApuestas.obtenerIdDesdeNombre
 import com.spinandgg.app.ui.modelos.Apuesta
 
 @Composable
@@ -39,7 +39,7 @@ fun AgregarTarjetaApuesta(
     apuesta: Apuesta,
     onClickEquipoLocal: (Apuesta) -> Unit = {},
     onClickEmpate: (Apuesta) -> Unit = {},
-    onClickEquipoVisitante: (Apuesta) -> Unit = {}
+    onClickEquipoVisitante: (Apuesta) -> Unit = {} ,
 ) {
     Box(
         modifier = Modifier
@@ -84,7 +84,7 @@ fun AgregarTarjetaApuesta(
             ) {
                 // Imagen de fondo
                 Image(
-                    painter = painterResource(id = com.spinandgg.app.R.drawable.fotopartido),
+                    painter = painterResource(id = obtenerIdDesdeNombre(apuesta.betImg)),
                     contentDescription = "Imagen del partido ${apuesta.teamAName} vs ${apuesta.teamBName}",
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
