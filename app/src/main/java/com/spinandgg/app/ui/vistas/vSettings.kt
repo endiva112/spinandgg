@@ -19,7 +19,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
@@ -35,9 +34,11 @@ fun CargarSettings(navController: NavHostController) {
     var email by remember { mutableStateOf(GestorUsuarios.usuarioActivo?.email ?: "???") }
     var password by remember { mutableStateOf(GestorUsuarios.usuarioActivo?.password ?: "???") }
 
+    var updateMessage by remember { mutableStateOf("") }
+
     Column(modifier = Modifier
         .fillMaxSize()
-        .background(Color(0xFFF2F2F2))
+        .background(Color(0x80273BCC))
     ) {
         AgregarCabecera(modifier = Modifier.weight(1f), navController)
 
@@ -113,7 +114,12 @@ fun CargarSettings(navController: NavHostController) {
             )
 
             Button(
-                onClick = {},
+                onClick = {
+                    GestorUsuarios.usuarioActivo?.let { it.email = email }
+                    GestorUsuarios.usuarioActivo?.let { it.password = password }
+
+                    updateMessage = "Campos actualizados correctamente"
+                },
                 colors = ButtonDefaults.buttonColors(Color(0xFF0D0335)),
                 modifier = Modifier
                     .align(Alignment.CenterHorizontally)
@@ -126,6 +132,13 @@ fun CargarSettings(navController: NavHostController) {
                     text = "Actualizar",
                     color = Color.White,
                     fontSize = 18.sp
+                )
+            }
+            if (updateMessage.isNotEmpty()) {
+                Text(
+                    text = updateMessage,
+                    color = Color.Green,
+                    modifier = Modifier.offset(y = (-55).dp)
                 )
             }
 
