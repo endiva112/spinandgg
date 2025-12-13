@@ -67,7 +67,7 @@ fun AgregarTarjetaApuesta(
         ) {
             // Hora del partido (puedes añadirla al modelo Apuesta si lo necesitas)
             Text(
-                text = "18:45",
+                text = apuesta.eventDate,
                 color = Color.White,
                 fontSize = 16.sp,
                 fontWeight = FontWeight.Bold,

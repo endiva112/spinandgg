@@ -10,6 +10,7 @@ import com.spinandgg.app.ui.componentes.AgregarTarjetaApuesta
 
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.ui.graphics.Brush
 import com.spinandgg.app.ui.componentes.AgregarBarraBusqueda
 import com.spinandgg.app.ui.componentes.AgregarBarraNavegacion
 import com.spinandgg.app.ui.componentes.AgregarCabecera
@@ -29,7 +30,14 @@ fun CargarListadoDeApuestas(navController: NavHostController) {
             modifier = Modifier
                 .weight(7.7f)
                 .fillMaxWidth()
-                .background(Color.Green)
+                .background(
+                    brush = Brush.verticalGradient(
+                        colors = listOf(
+                            Color(0xFF110545),
+                            Color(0xFF000000)
+                        )
+                    )
+                )
         ) {
             items(GestorApuestas.apuestasExistentes) { apuesta ->
                 AgregarTarjetaApuesta(

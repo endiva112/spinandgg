@@ -7,9 +7,9 @@ object GestorApuestas {
 
     fun cargarApuestas() {
         val apuestas = listOf(
-            Apuesta(1, "bet_1", "Karmine Corp", "Vitality", 1.25, 4.30, 3.50),
-            Apuesta(2, "bet_2", "T1", "Dplus Kia", 1.75, 23.12, 2.14),
-            Apuesta(3, "bet_3", "Real Madrid", "Manchester City", 1.75, 13.07, 1.80)
+            Apuesta(1, "bet_1", "13/12/2025 - 18:45", "Karmine Corp", "Vitality", 1.25, 4.30, 3.50),
+            Apuesta(2, "bet_2", "15/12/2025 - 21:27", "T1", "Dplus Kia", 1.75, 23.12, 2.14),
+            Apuesta(3, "bet_3", "12/01/2026 - 14:00", "Real Madrid", "Manchester City", 1.75, 13.07, 1.80)
         )
 
         apuestasExistentes.clear()
