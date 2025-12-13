@@ -6,7 +6,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
-import com.spinandgg.app.ui.componentes.AgregarNavBar
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -25,6 +24,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.spinandgg.app.ui.componentes.AgregarBarraBusqueda
+import com.spinandgg.app.ui.componentes.AgregarBarraInformativa
+import com.spinandgg.app.ui.componentes.AgregarBarraNavegacion
+import com.spinandgg.app.ui.componentes.AgregarCabecera
 
 
 @Composable
@@ -36,25 +39,11 @@ fun CargarSettings(navController: NavHostController) {
         .fillMaxSize()
         .background(Color(0xFFF2F2F2))
     ) {
+        AgregarCabecera(modifier = Modifier.weight(0.8f))
 
-        //header
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(70.dp)
-                .background(Color.Black)
-        ) {
-            Image(
-                painter = painterResource(id = com.spinandgg.app.R.drawable.logo),
-                contentDescription = "",
-                modifier = Modifier
-                    .size(120.dp)
-                    .align(Alignment.Center)
-            )
+        AgregarBarraInformativa(modifier = Modifier.weight(0.8f))
 
-        }
-
-        //titulo
+        /*titulo
         Box(
             modifier = Modifier
                 .fillMaxWidth()
@@ -67,13 +56,13 @@ fun CargarSettings(navController: NavHostController) {
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.align(Alignment.Center)
             )
-        }
+        }*/
 
         //contenido
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .weight(1f)
+                .weight(7.7f)
                 .padding(20.dp, 10.dp, 20.dp)
         ) {
             // Email estático
@@ -165,6 +154,6 @@ fun CargarSettings(navController: NavHostController) {
                 )
             }
         }
-        AgregarNavBar(navController)
+        AgregarBarraNavegacion(modifier = Modifier.weight(0.7f), navController)
     }
 }

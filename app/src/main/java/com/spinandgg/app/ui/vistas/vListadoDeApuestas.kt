@@ -10,7 +10,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import com.spinandgg.app.ui.componentes.AgregarNavBar
 import com.spinandgg.app.ui.componentes.AgregarTarjetaApuesta
 
 import androidx.compose.foundation.lazy.LazyColumn
@@ -52,7 +51,7 @@ fun CargarListadoDeApuestas(navController: NavHostController) {
             }
         }
 
-        AgregarBarraNavegacion(modifier = Modifier.weight(0.7f))
+        AgregarBarraNavegacion(modifier = Modifier.weight(0.7f), navController)
     }
 }
 

@@ -7,9 +7,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import com.spinandgg.app.ui.componentes.AgregarBarraBusqueda
 import com.spinandgg.app.ui.componentes.AgregarBarraInformativa
 import com.spinandgg.app.ui.componentes.AgregarBarraNavegacion
 import com.spinandgg.app.ui.componentes.AgregarCabecera
@@ -48,6 +46,6 @@ fun CargarHome(navController: NavHostController) {
             }
         }
 
-        AgregarBarraNavegacion(modifier = Modifier.weight(0.7f))
+        AgregarBarraNavegacion(modifier = Modifier.weight(0.7f), navController)
     }
 }
